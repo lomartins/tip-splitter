@@ -1,8 +1,8 @@
 # Tip Splitter 💵
 
-<div style="text-align: center;">
-<img src="assets/icon/icon.png" alt="App Logo" width="128" style="border-radius: 16px;">
-</div>
+<p align="center">
+    <img src="assets/icon/icon.png" alt="App Logo" width="128" style="border-radius: 16px;">
+</p>
 
 Professional bill splitting calculator app built with Flutter. Instantly calculate tip percentages and split bills fairly among friends.
 
@@ -153,6 +153,6 @@ Currently supports Portuguese UI with internationalization framework ready for e
 
 ---
 
-**Developer**: [Luisa Martin](mailto:luisa@luisamartins.dev)  
+**Developer**: [Luisa Martins](mailto:luisa@luisamartins.dev)  
 **License**: Proprietary  
 **Last Updated**: April 2026
