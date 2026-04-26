@@ -1,0 +1,16 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Read|Edit|Write|Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 /home/lomartins/projects/tip_splitter/.claude/hooks/block-secrets.py",
+            "statusMessage": "Checking for secret file access..."
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+set -e
+
+BLOCKED=$(git diff --cached --name-only | grep -E \
+  '(^|/)\.env$|\.pem$|\.key$|\.cert$|(^|/)secrets\.json$|(^|/)config\.json$|(^|/)key\.properties$|\.jks$|\.keystore$|(^|/)local\.properties$|(^|/)google-services\.json$|\.p8$|\.p12$|\.mobileprovision$|(^|/)GoogleService-Info\.plist$' \
+  || true)
+
+if [ -n "$BLOCKED" ]; then
+  echo ""
+  echo "COMMIT BLOCKED: secret/credential files staged:"
+  echo "$BLOCKED" | sed 's/^/  /'
+  echo ""
+  echo "Unstage them: git reset HEAD <file>"
+  echo "Then add to .gitignore to prevent future accidents."
+  echo ""
+  exit 1
+fi
