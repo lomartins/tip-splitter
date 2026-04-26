@@ -1,0 +1,27 @@
+{
+  "@@locale": "pt",
+  "appTitle": "Dividir a Conta",
+  "billAmount": "VALOR DA CONTA",
+  "splitBetween": "DIVIDIR ENTRE",
+  "personSuffix": "{count, plural, =1{ pessoa} other{ pessoas}}",
+  "@personSuffix": {
+    "placeholders": {
+      "count": { "type": "int" }
+    }
+  },
+  "tipPercentage": "PORCENTAGEM DA GORJETA",
+  "eachPersonPays": "CADA PESSOA PAGA",
+  "bill": "Conta",
+  "tipWithPct": "Gorjeta ({pct}%)",
+  "@tipWithPct": {
+    "placeholders": {
+      "pct": { "type": "String" }
+    }
+  },
+  "total": "Total",
+  "settings": "Configurações",
+  "currency": "MOEDA",
+  "customCurrency": "Personalizado…",
+  "customSymbol": "Símbolo personalizado",
+  "defaultTip": "GORJETA PADRÃO"
+}

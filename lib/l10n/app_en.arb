@@ -1,0 +1,27 @@
+{
+  "@@locale": "en",
+  "appTitle": "Tip Splitter",
+  "billAmount": "BILL AMOUNT",
+  "splitBetween": "SPLIT BETWEEN",
+  "personSuffix": "{count, plural, =1{ person} other{ people}}",
+  "@personSuffix": {
+    "placeholders": {
+      "count": { "type": "int" }
+    }
+  },
+  "tipPercentage": "TIP PERCENTAGE",
+  "eachPersonPays": "EACH PERSON PAYS",
+  "bill": "Bill",
+  "tipWithPct": "Tip ({pct}%)",
+  "@tipWithPct": {
+    "placeholders": {
+      "pct": { "type": "String" }
+    }
+  },
+  "total": "Total",
+  "settings": "Settings",
+  "currency": "CURRENCY",
+  "customCurrency": "Custom…",
+  "customSymbol": "Custom symbol",
+  "defaultTip": "DEFAULT TIP"
+}
