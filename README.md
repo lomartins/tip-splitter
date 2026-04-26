@@ -1,6 +1,8 @@
 # Tip Splitter 💵
 
+<div style="text-align: center;">
 <img src="assets/icon/icon.png" alt="App Logo" width="128" style="border-radius: 16px;">
+</div>
 
 Professional bill splitting calculator app built with Flutter. Instantly calculate tip percentages and split bills fairly among friends.
 
@@ -38,7 +40,7 @@ Professional bill splitting calculator app built with Flutter. Instantly calcula
 ## Screenshots
 
 ### Home Screen - Bill Calculator
-![Home Screen](screenshots/01-home.png)
+<img src="screenshots/01-home.png" alt="Home Screen" width="300">
 
 The main interface displays:
 - Bill amount input field
