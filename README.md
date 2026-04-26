@@ -1,6 +1,6 @@
 # Tip Splitter 💵
 
-![App Logo](assets/icon/icon.png)
+<img src="assets/icon/icon.png" alt="App Logo" width="128" style="border-radius: 16px;">
 
 Professional bill splitting calculator app built with Flutter. Instantly calculate tip percentages and split bills fairly among friends.
 
@@ -51,7 +51,7 @@ The main interface displays:
 
 | Component | Technology |
 |-----------|-----------|
-| **Framework** | Flutter 3.11.4+ |
+| **Framework** | Flutter |
 | **Language** | Dart |
 | **State Management** | BLoC Pattern |
 | **Storage** | Shared Preferences |
@@ -60,12 +60,12 @@ The main interface displays:
 
 ## Dependencies
 
-- **flutter_bloc**: ^9.1.1 - State management
-- **equatable**: ^2.0.8 - Equality comparison
-- **intl**: Latest - Internationalization
-- **shared_preferences**: ^2.5.5 - Local storage
-- **animated_text_kit**: ^4.3.0 - Text animations
-- **cupertino_icons**: ^1.0.8 - iOS-style icons
+- **flutter_bloc** - State management
+- **equatable** - Equality comparison
+- **intl** - Internationalization
+- **shared_preferences** - Local storage
+- **animated_text_kit** - Text animations
+- **cupertino_icons** - iOS-style icons
 
 ## Design System
 
