@@ -18,11 +18,15 @@ class TipScreen extends StatelessWidget {
           builder: (context) => Row(
             mainAxisSize: MainAxisSize.min,
             children: [
-              Icon(Icons.receipt_long,
-                  color: Theme.of(context).colorScheme.primary),
+              Icon(
+                Icons.receipt_long,
+                color: Theme.of(context).colorScheme.onPrimaryContainer,
+              ),
               const SizedBox(width: 12),
-              Text(AppLocalizations.of(context)!.appTitle,
-                  style: const TextStyle(fontWeight: FontWeight.w400)),
+              Text(
+                AppLocalizations.of(context)!.appTitle,
+                style: const TextStyle(fontWeight: FontWeight.w400),
+              ),
             ],
           ),
         ),
@@ -30,9 +34,7 @@ class TipScreen extends StatelessWidget {
           IconButton(
             icon: const Icon(Icons.settings),
             onPressed: () => Navigator.of(context).push(
-              MaterialPageRoute<void>(
-                builder: (_) => const SettingsScreen(),
-              ),
+              MaterialPageRoute<void>(builder: (_) => const SettingsScreen()),
             ),
           ),
         ],

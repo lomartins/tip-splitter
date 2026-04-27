@@ -13,6 +13,7 @@ import 'ui/tip/tip_screen.dart';
 // Light: derived from oklch tokens in design + #3D5AFE primary (from tweaks)
 // Dark: explicit hex values from design darkMode overrides
 const _seedColor = Color(0xFF3D5AFE);
+const _seedColorDark = Color.fromARGB(255, 100, 122, 244);
 
 final _lightScheme =
     ColorScheme.fromSeed(
@@ -20,6 +21,7 @@ final _lightScheme =
       brightness: Brightness.light,
     ).copyWith(
       primary: _seedColor,
+      onPrimaryContainer: _seedColor,
       surface: const Color(0xFFF6F9FB),
       onSurface: const Color(0xFF0E1216),
       surfaceContainerHighest: const Color(0xFFE0E6EA),
@@ -31,26 +33,25 @@ final _lightScheme =
 
 final _darkScheme =
     ColorScheme.fromSeed(
-      seedColor: _seedColor,
+      seedColor: _seedColorDark,
       brightness: Brightness.dark,
     ).copyWith(
       primary: _seedColor,
-      surface: const Color(0xFF2C2C2E),
+      surface: const Color(0xFF1C1C1E),
       onSurface: const Color(0xFFF2F2F7),
       surfaceContainerHighest: const Color(0xFF3A3A3C),
-      // rgba(235,235,245,0.6) blended on #2C2C2E
-      onSurfaceVariant: const Color(0xFF9E9EA5),
-      // rgba(255,255,255,0.12) blended on #2C2C2E
+      surfaceContainerLow: const Color(0xFF2C2C2E),
+      onSurfaceVariant: const Color(0xFFA6A6AD),
+      secondaryContainer: const Color(0xFFD3E7FF),
+      onSecondaryContainer: const Color(0xFF001E2B),
       outlineVariant: const Color(0xFF454547),
-      outline: const Color(0xFF636368),
+      outline: const Color(0xFF969FA6),
     );
 
 ThemeData _buildTheme(ColorScheme scheme) => ThemeData(
   colorScheme: scheme,
   useMaterial3: true,
-  scaffoldBackgroundColor: scheme.brightness == Brightness.dark
-      ? const Color(0xFF1C1C1E)
-      : const Color(0xFFF6F9FB),
+  scaffoldBackgroundColor: scheme.surface,
   cardTheme: CardThemeData(
     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
     elevation: 1,
@@ -70,25 +71,26 @@ class TipSplitterApp extends StatelessWidget {
         create: (_) => TipBloc(),
         child: BlocListener<SettingsCubit, SettingsState>(
           listenWhen: (a, b) => a.defaultTipPct != b.defaultTipPct,
-          listener: (context, settings) =>
-              context.read<TipBloc>().add(TipPctChanged(settings.defaultTipPct)),
+          listener: (context, settings) => context.read<TipBloc>().add(
+            TipPctChanged(settings.defaultTipPct),
+          ),
           child: MaterialApp(
-              onGenerateTitle: (context) =>
-                  AppLocalizations.of(context)!.appTitle,
-              localizationsDelegates: const [
-                AppLocalizations.delegate,
-                GlobalMaterialLocalizations.delegate,
-                GlobalWidgetsLocalizations.delegate,
-                GlobalCupertinoLocalizations.delegate,
-              ],
-              supportedLocales: const [Locale('en'), Locale('pt')],
-              theme: _buildTheme(_lightScheme),
-              darkTheme: _buildTheme(_darkScheme),
-              themeMode: ThemeMode.system,
-              home: const TipScreen(),
-            ),
+            onGenerateTitle: (context) =>
+                AppLocalizations.of(context)!.appTitle,
+            localizationsDelegates: const [
+              AppLocalizations.delegate,
+              GlobalMaterialLocalizations.delegate,
+              GlobalWidgetsLocalizations.delegate,
+              GlobalCupertinoLocalizations.delegate,
+            ],
+            supportedLocales: const [Locale('en'), Locale('pt')],
+            theme: _buildTheme(_lightScheme),
+            darkTheme: _buildTheme(_darkScheme),
+            themeMode: ThemeMode.system,
+            home: const TipScreen(),
           ),
         ),
-      );
+      ),
+    );
   }
 }
