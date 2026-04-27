@@ -58,11 +58,35 @@ jobs:
       - name: Test
         run: flutter test
 
+      # Requires android/app/build.gradle.kts to read android/key.properties for signing.
+      # See: https://docs.flutter.dev/deployment/android#signing-the-app
+      - name: Setup signing keystore
+        run: |
+          echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 --decode > android/app/keystore.jks
+          cat > android/key.properties <<EOF
+          storePassword=${{ secrets.KEYSTORE_PASSWORD }}
+          keyPassword=${{ secrets.KEY_PASSWORD }}
+          keyAlias=${{ secrets.KEY_ALIAS }}
+          storeFile=keystore.jks
+          EOF
+
       - name: Build release APK
         run: flutter build apk --release
+
+      - name: Build release AAB
+        run: flutter build appbundle --release
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
           files: build/app/outputs/flutter-apk/app-release.apk
           generate_release_notes: true
+
+      - name: Upload to Google Play (internal track)
+        uses: r0adkll/upload-google-play@v1
+        with:
+          serviceAccountJsonPlainText: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
+          packageName: dev.luisamartins.tip_splitter
+          releaseFiles: build/app/outputs/bundle/release/app-release.aab
+          track: internal
+          status: completed
