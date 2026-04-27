@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5c76ff" />
+      <stop offset="100%" stop-color="#3d5afe" />
+    </linearGradient>
+    <clipPath id="roundedSquare">
+      <rect width="512" height="512" rx="0" ry="0" />
+    </clipPath>
+  </defs>
+
+  <!-- Background -->
+  <rect width="512" height="512" fill="url(#bgGrad)" />
+
+  <!-- Foreground: receipt icon scaled to fit nicely centered -->
+  <!-- Original SVG viewBox: 0.21 0.195 0.58 0.61 in a 2048x2048 space -->
+  <!-- That means receipt is at pixel 430,399 to 1617,1649 in 2048px space -->
+  <!-- We scale it to fit in ~340x340 centered in 512x512 (86px padding each side) -->
+  <g transform="translate(-9.625, -9.625) scale(531.25)">
+    <defs>
+      <linearGradient id="sheetGrad" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+        <stop offset="0%" stop-color="#ffffff" />
+        <stop offset="100%" stop-color="#eef1ff" />
+      </linearGradient>
+    </defs>
+
+    <!-- receipt paper -->
+    <rect x="0.21" y="0.195" width="0.58" height="0.61" rx="0.048" fill="url(#sheetGrad)" />
+
+    <!-- zig-zag bottom -->
+    <path d="M0.210 0.805 L0.210 0.805 L0.234 0.775 L0.258 0.805 L0.282 0.775 L0.307 0.805 L0.331 0.775 L0.355 0.805 L0.379 0.775 L0.403 0.805 L0.428 0.775 L0.452 0.805 L0.476 0.775 L0.500 0.805 L0.524 0.775 L0.548 0.805 L0.573 0.775 L0.597 0.805 L0.621 0.775 L0.645 0.805 L0.669 0.775 L0.693 0.805 L0.718 0.775 L0.742 0.805 L0.766 0.775 L0.790 0.805 L0.790 0.805 Z" fill="url(#sheetGrad)" />
+
+    <!-- header label line -->
+    <rect x="0.33" y="0.265" width="0.34" height="0.038" rx="0.019" fill="#3d5afe" opacity="0.22" />
+
+    <!-- dotted separator -->
+    <circle cx="0.270" cy="0.335" r="0.009" fill="#3d5afe" opacity="0.18" />
+    <circle cx="0.333" cy="0.335" r="0.009" fill="#3d5afe" opacity="0.18" />
+    <circle cx="0.396" cy="0.335" r="0.009" fill="#3d5afe" opacity="0.18" />
+    <circle cx="0.459" cy="0.335" r="0.009" fill="#3d5afe" opacity="0.18" />
+    <circle cx="0.522" cy="0.335" r="0.009" fill="#3d5afe" opacity="0.18" />
+    <circle cx="0.585" cy="0.335" r="0.009" fill="#3d5afe" opacity="0.18" />
+    <circle cx="0.648" cy="0.335" r="0.009" fill="#3d5afe" opacity="0.18" />
+    <circle cx="0.711" cy="0.335" r="0.009" fill="#3d5afe" opacity="0.18" />
+    <circle cx="0.774" cy="0.335" r="0.009" fill="#3d5afe" opacity="0.18" />
+
+    <!-- line items row 1 -->
+    <rect x="0.28" y="0.370" width="0.22" height="0.026" rx="0.013" fill="#3d5afe" opacity="0.3" />
+    <rect x="0.62" y="0.370" width="0.10" height="0.026" rx="0.013" fill="#3d5afe" opacity="0.3" />
+
+    <!-- line items row 2 -->
+    <rect x="0.28" y="0.408" width="0.18" height="0.022" rx="0.011" fill="#3d5afe" opacity="0.2" />
+    <rect x="0.64" y="0.408" width="0.08" height="0.022" rx="0.011" fill="#3d5afe" opacity="0.2" />
+
+    <!-- line items row 3 -->
+    <rect x="0.28" y="0.440" width="0.21" height="0.022" rx="0.011" fill="#3d5afe" opacity="0.2" />
+    <rect x="0.63" y="0.440" width="0.09" height="0.022" rx="0.011" fill="#3d5afe" opacity="0.2" />
+
+    <!-- solid divider -->
+    <rect x="0.25" y="0.485" width="0.50" height="0.016" rx="0.008" fill="#3d5afe" opacity="0.12" />
+
+    <!-- total row bold -->
+    <rect x="0.28" y="0.515" width="0.15" height="0.03" rx="0.015" fill="#2541d4" opacity="0.45" />
+    <rect x="0.57" y="0.515" width="0.15" height="0.03" rx="0.015" fill="#2541d4" opacity="0.55" />
+
+    <!-- split section band -->
+    <rect x="0.21" y="0.570" width="0.58" height="0.135" fill="#3d5afe" opacity="0.07" />
+
+    <!-- left person head -->
+    <circle cx="0.365" cy="0.608" r="0.042" fill="#2541d4" opacity="0.75" />
+    <!-- left person shoulders -->
+    <path d="M0.29 0.675 Q0.365 0.628 0.44 0.675" fill="none" stroke="#2541d4" stroke-width="0.028" stroke-linecap="round" opacity="0.75" />
+
+    <!-- right person head -->
+    <circle cx="0.635" cy="0.608" r="0.042" fill="#2541d4" opacity="0.75" />
+    <!-- right person shoulders -->
+    <path d="M0.56 0.675 Q0.635 0.628 0.71 0.675" fill="none" stroke="#2541d4" stroke-width="0.028" stroke-linecap="round" opacity="0.75" />
+
+    <!-- divide symbol bg circle -->
+    <circle cx="0.5" cy="0.61" r="0.055" fill="#2541d4" opacity="0.12" />
+    <!-- divide symbol -->
+    <text x="0.5" y="0.633" text-anchor="middle" font-size="0.072" font-weight="800"
+      font-family="-apple-system, sans-serif" fill="#2541d4" opacity="0.7">&#247;</text>
+  </g>
+</svg>
