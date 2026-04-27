@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1 1" width="1024" height="1024">
+  <defs>
+    <linearGradient id="grad" x1="0" y1="0" x2="0.7" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#6979f8" />
+      <stop offset="100%" stop-color="#2541d4" />
+    </linearGradient>
+    <linearGradient id="sheetGrad" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#eef1ff" />
+    </linearGradient>
+  </defs>
+
+  <!-- background -->
+  <rect width="1" height="1" fill="url(#grad)" />
+
+  <!-- subtle radial highlight top-left -->
+  <circle cx="0.15" cy="0.12" r="0.45" fill="white" opacity="0.07" />
+
+  <!-- receipt paper -->
+  <rect x="0.21" y="0.135" width="0.58" height="0.61" rx="0.048" fill="url(#sheetGrad)" />
+
+  <!-- zig-zag bottom of receipt -->
+  <path d="M0.210 0.745 L0.210 0.745 L0.234 0.715 L0.258 0.745 L0.282 0.715 L0.307 0.745 L0.331 0.715 L0.355 0.745 L0.379 0.715 L0.403 0.745 L0.428 0.715 L0.452 0.745 L0.476 0.715 L0.500 0.745 L0.524 0.715 L0.548 0.745 L0.573 0.715 L0.597 0.745 L0.621 0.715 L0.645 0.745 L0.669 0.715 L0.693 0.745 L0.718 0.715 L0.742 0.745 L0.766 0.715 L0.790 0.745 L0.790 0.745 Z" fill="url(#sheetGrad)" />
+
+  <!-- header label line -->
+  <rect x="0.33" y="0.205" width="0.34" height="0.038" rx="0.019" fill="#3d5afe" opacity="0.22" />
+
+  <!-- dotted separator -->
+  <circle cx="0.270" cy="0.275" r="0.009" fill="#3d5afe" opacity="0.18" />
+  <circle cx="0.333" cy="0.275" r="0.009" fill="#3d5afe" opacity="0.18" />
+  <circle cx="0.396" cy="0.275" r="0.009" fill="#3d5afe" opacity="0.18" />
+  <circle cx="0.459" cy="0.275" r="0.009" fill="#3d5afe" opacity="0.18" />
+  <circle cx="0.522" cy="0.275" r="0.009" fill="#3d5afe" opacity="0.18" />
+  <circle cx="0.585" cy="0.275" r="0.009" fill="#3d5afe" opacity="0.18" />
+  <circle cx="0.648" cy="0.275" r="0.009" fill="#3d5afe" opacity="0.18" />
+  <circle cx="0.711" cy="0.275" r="0.009" fill="#3d5afe" opacity="0.18" />
+  <circle cx="0.774" cy="0.275" r="0.009" fill="#3d5afe" opacity="0.18" />
+
+  <!-- line items row 1 -->
+  <rect x="0.28" y="0.310" width="0.22" height="0.026" rx="0.013" fill="#3d5afe" opacity="0.3" />
+  <rect x="0.62" y="0.310" width="0.10" height="0.026" rx="0.013" fill="#3d5afe" opacity="0.3" />
+
+  <!-- line items row 2 -->
+  <rect x="0.28" y="0.348" width="0.18" height="0.022" rx="0.011" fill="#3d5afe" opacity="0.2" />
+  <rect x="0.64" y="0.348" width="0.08" height="0.022" rx="0.011" fill="#3d5afe" opacity="0.2" />
+
+  <!-- line items row 3 -->
+  <rect x="0.28" y="0.380" width="0.21" height="0.022" rx="0.011" fill="#3d5afe" opacity="0.2" />
+  <rect x="0.63" y="0.380" width="0.09" height="0.022" rx="0.011" fill="#3d5afe" opacity="0.2" />
+
+  <!-- solid divider -->
+  <rect x="0.25" y="0.425" width="0.50" height="0.016" rx="0.008" fill="#3d5afe" opacity="0.12" />
+
+  <!-- total row bold -->
+  <rect x="0.28" y="0.455" width="0.15" height="0.03" rx="0.015" fill="#2541d4" opacity="0.45" />
+  <rect x="0.57" y="0.455" width="0.15" height="0.03" rx="0.015" fill="#2541d4" opacity="0.55" />
+
+  <!-- split section band -->
+  <rect x="0.21" y="0.510" width="0.58" height="0.135" fill="#3d5afe" opacity="0.07" />
+
+  <!-- left person head -->
+  <circle cx="0.365" cy="0.548" r="0.042" fill="#2541d4" opacity="0.75" />
+  <!-- left person shoulders -->
+  <path d="M0.29 0.615 Q0.365 0.568 0.44 0.615" fill="none" stroke="#2541d4" stroke-width="0.028" stroke-linecap="round" opacity="0.75" />
+
+  <!-- right person head -->
+  <circle cx="0.635" cy="0.548" r="0.042" fill="#2541d4" opacity="0.75" />
+  <!-- right person shoulders -->
+  <path d="M0.56 0.615 Q0.635 0.568 0.71 0.615" fill="none" stroke="#2541d4" stroke-width="0.028" stroke-linecap="round" opacity="0.75" />
+
+  <!-- divide symbol bg circle -->
+  <circle cx="0.5" cy="0.55" r="0.055" fill="#2541d4" opacity="0.12" />
+  <!-- divide symbol -->
+  <text x="0.5" y="0.573" text-anchor="middle" font-size="0.072" font-weight="800"
+    font-family="-apple-system, sans-serif" fill="#2541d4" opacity="0.7">&#247;</text>
+</svg>
