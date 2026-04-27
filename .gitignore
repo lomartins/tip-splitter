@@ -44,6 +44,10 @@ app.*.map.json
 /android/app/profile
 /android/app/release
 
+# Secret files
+key.properties
+*.jks
+
 ## AI local
 .cc-history/
 .omc/
